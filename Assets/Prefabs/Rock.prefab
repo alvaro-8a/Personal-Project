@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8216298763853425791}
   - component: {fileID: 8216298763853425779}
   - component: {fileID: 8216298763853425778}
+  - component: {fileID: 1540131458655989348}
   m_Layer: 0
   m_Name: Rock
   m_TagString: Rock
@@ -122,9 +123,23 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8216298763853425784}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d4cf7ff0b8918364283cafefb9730260, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 80
+--- !u!114 &1540131458655989348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8216298763853425784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 978d5c3b786692142835b12a13ce9bff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 5
   speed: 80

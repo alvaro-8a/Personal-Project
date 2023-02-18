@@ -20,17 +20,22 @@ public class SpawnManager : MonoBehaviour
     private float rockSpawnTimer = 1.5f;
     private float powerupSpawnTimer = 5.0f;
 
+    // ENCAPSULATION
     // monster Waves
-    public int monsterCount;
-    public int waveCount = 2;
+    public int monsterCount { get; private set; }
+    public int waveCount { get; private set; }
 
-    public float monster1Speed = 2500f;
-    public float monster2Speed = 2000f;
-    public float speedIncrement = 200f;
+    public float monster1Speed { get; private set; }
+    public float monster2Speed { get; private set; }
+    public float speedIncrement { get; private set; }
 
     // Start is called before the first frame update
     void Start()
     {
+        monster1Speed = 2500f;
+        monster2Speed = 2000f;
+        speedIncrement = 200f;
+        waveCount = 2;
         InvokeRepeating("SpawnRock", startDelay, rockSpawnTimer);
         InvokeRepeating("SpawnPowerup", startDelay, powerupSpawnTimer);
     }
@@ -50,6 +55,8 @@ public class SpawnManager : MonoBehaviour
             monster2Speed += speedIncrement;
         }
     }
+
+    // ABSTRACTION
 
     // Instantiate the monster wave
     private void SpawnMonsterWave(int monstersToSpawn)
